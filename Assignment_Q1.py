@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 import matplotlib.pyplot as plt
 
-# ensure generate_dataset.py has been run and los_nlos_dataset.csv exists in the directory
+# generate_dataset.py has been run here and los_nlos_dataset.csv exists in the directory
 df = pd.read_csv('los_nlos_dataset.csv')
 
 # part (a): feature extraction
