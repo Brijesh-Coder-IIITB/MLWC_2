@@ -19,7 +19,7 @@ Kurtosis struggles significantly at the bottom of the SNR range (0 to 5 dB). As 
 
 ### Part (c)
 
-![Q1 Part C Accuracy](Figure_1_2_3.png)
+![Q1 Part C Accuracy](Q1_partc.png)
 
 **At high SNR, do the two curves agree? What does this tell you about the features at high SNR?**
 Both the fixed-template and adaptive models converge tightly at high SNR levels. This alignment proves that when thermal noise is minimal, the geometric features of the wireless channels are highly stable, reliable, and easily separable.
@@ -36,9 +36,9 @@ Training entirely at 0 dB would severely degrade high-SNR performance. The model
 
 ### Part (b)
 
-![Q2 Part B Elbow](Figure_2_1_2.png)
+![Q2 Part B Elbow](Q2_partb_elbow.png)
 
-![Q2 Part B Scatter](Figure_2_2_2.png)
+![Q2 Part B Scatter](Q2_partb_scatter.png)
 
 **Which feature set produces the highest Cluster Purity?**
 The Cartesian coordinate system (comprising $rx\_I$ and $rx\_Q$) delivers the maximum possible Cluster Purity, achieving a flawless 100% score.
@@ -50,7 +50,7 @@ Cartesian mapping perfectly aligns with the fundamental, rectangular physical la
 
 ### Part (c)
 
-![Q2 Part C Purity](Figure_2_3_2.png)
+![Q2 Part C Purity](Q2_partc_purity.png)
 
 **At high SNR, do the two curves agree? What does this indicate about centroid stability in low-noise regimes?**
 The fixed and adaptive accuracy curves seamlessly merge at upper SNR tiers. This demonstrates extreme centroid stability; with negligible noise interference, the incoming data points cluster perfectly around their mathematically intended constellation coordinates.
