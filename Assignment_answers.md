@@ -4,7 +4,7 @@
 
 ### Part (b)
 
-![Q1 Part B Accuracy](Figure_1_3.png)
+![Q1 Part B Accuracy](Q1_partb.png)
 
 **Which single feature performs best overall? Why does that feature separate LOS from NLOS better than the others?**
 The most effective individual metric is the RMS delay spread. It excels at distinguishing the two states because it measures a fundamental physical contrast: Line-of-Sight (LOS) signals arrive with a tightly packed delay profile, whereas Non-Line-of-Sight (NLOS) signals undergo significant scattering, leading to a much wider and dispersed arrival time distribution.
