@@ -9,9 +9,8 @@ import matplotlib.pyplot as plt
 # ensure generate_dataset.py has been run and los_nlos_dataset.csv exists in the directory
 df = pd.read_csv('los_nlos_dataset.csv')
 
-# ==========================================
 # part (a): feature extraction
-# ==========================================
+
 # extract raw real and imaginary tap arrays across all 6 taps
 h_real = df[[f'h_real_{i}' for i in range(6)]].values
 h_imag = df[[f'h_imag_{i}' for i in range(6)]].values
@@ -38,9 +37,8 @@ df['rms_delay_spread'] = np.sqrt(delay_variance)
 # 5. rician k-factor: ratio of dominant peak power to scattered variance
 df['rician_k'] = (np.max(amplitudes, axis=1)**2) / (2 * np.var(amplitudes, axis=1))
 
-# ==========================================
 # part (b): adaptive svms (train = test snr)
-# ==========================================
+
 features = ['kurtosis', 'skewness', 'rising_time', 'rms_delay_spread', 'rician_k']
 snr_levels = sorted(df['snr_db'].unique())
 
@@ -82,9 +80,8 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# ==========================================
 # part (c): fixed 25 db model evaluation
-# ==========================================
+
 # isolate data exclusively at 25 db for fixed training
 df_25 = df[df['snr_db'] == 25]
 X_train_25, _, y_train_25, _ = train_test_split(
