@@ -8,9 +8,8 @@ from sklearn.preprocessing import StandardScaler
 # set random seed to 67 as strictly required by the assignment
 np.random.seed(67)
 
-# ==========================================
 # data generation & part (a): feature extraction
-# ==========================================
+
 # generate standard square 16-qam grid[cite: 2]
 snr_levels = [0, 5, 10, 15, 20, 25, 30]
 coords = np.array([-3, -1, 1, 3])
@@ -51,9 +50,8 @@ for snr in snr_levels:
 # compile all generated samples and features into a dataframe
 df2 = pd.DataFrame(data)
 
-# ==========================================
 # part (b): k-means evaluation at 25 db
-# ==========================================
+
 # isolate the data subset corresponding to snr = 25 db[cite: 2]
 df_25 = df2[df2['snr_db'] == 25]
 X_cartesian_25 = df_25[['rx_I', 'rx_Q']].values
@@ -121,9 +119,8 @@ print(f"Purity Feature Set 1 (Cartesian)  : {purity_set1:.2f}%")
 print(f"Purity Feature Set 2 (Polar)      : {purity_set2:.2f}%")
 print(f"Purity Feature Set 3 (Combined)   : {purity_set3:.2f}%")
 
-# ==========================================
 # part (c): adaptive vs fixed demodulation strategies
-# ==========================================
+
 adaptive_purity = []
 fixed_purity = []
 
